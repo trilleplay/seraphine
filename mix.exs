@@ -5,13 +5,14 @@ defmodule Seraphine.MixProject do
     [
       app: :seraphine,
       name: "Seraphine",
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.14",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       description: "Seraphine is an API library for the Riot Games API. More specifically the League of Legends part of the API only.",
       deps: deps(),
-      package: package()
+      package: package(),
+      docs: [extras: ["README.md"]]
     ]
   end
 
@@ -37,7 +38,8 @@ defmodule Seraphine.MixProject do
       {:httpoison, "~> 1.8"},
       {:poison, "~> 5.0"},
       {:semaphore, "~> 1.3"},
-      {:fastglobal, "~> 1.0"}
+      {:fastglobal, "~> 1.0"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
