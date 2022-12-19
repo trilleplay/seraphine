@@ -6,11 +6,11 @@ defmodule Seraphine.MatchV5 do
   @doc """
   Get the matches played by `puuid` through `routing`.
   """
-  def matches_by_puuid(routing, puuid) do
+  def matches_by_puuid(routing, puuid, count \\ 20, offset \\ 0) do
     Seraphine.API.Rest.wrapped_get(
       routing,
       "match_v5_matches_by_puuid",
-      "https://#{routing}.api.riotgames.com/lol/match/v5/matches/by-puuid/#{puuid}/ids"
+      "https://#{routing}.api.riotgames.com/lol/match/v5/matches/by-puuid/#{puuid}/ids?start=#{offset}&count=#{count}"
     )
   end
 
