@@ -9,7 +9,7 @@ defmodule Seraphine.MixProject do
       elixir: "~> 1.13",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
-      description: "Seraphine is an API library for the Riot Games API. More specifically the League of Legends part of the API only.",
+      description: "Seraphine is an API library for the Riot Games API. For the League of Legends and VALORANT part of the API only.",
       deps: deps(),
       package: package(),
       docs: [extras: ["README.md"]]
