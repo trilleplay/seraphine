@@ -16,7 +16,14 @@ defmodule Seraphine.API.RateLimiter do
     "americas",
     "asia",
     "europe",
-    "sea"
+    "sea",
+    "ap",
+    "br",
+    "esports",
+    "eu",
+    "kr",
+    "latam",
+    "na"
   ]
 
   def handle_retry_after_headers(headers) do
